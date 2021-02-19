@@ -22,7 +22,7 @@ if 'tensorflow' == K.backend():
 from keras.backend.tensorflow_backend import set_session
 config2 = tf.compat.v1.ConfigProto()
 config2.gpu_options.allow_growth = True
-set_session(tf.compat.v1.Session(config=config2))
+tf.compat.v1.keras.backend.set_session(tf.compat.v1.Session(config=config2))
 
 sys.setrecursionlimit(40000)
 
